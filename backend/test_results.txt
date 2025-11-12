@@ -1,0 +1,58 @@
+[1m============================= test session starts ==============================[0m
+[1mcollecting ... [0mcollected 46 items
+
+tests/test_calculation_engine.py::TestBasicMathEvaluation::test_simple_arithmetic [32mPASSED[0m[32m [  2%][0m
+tests/test_calculation_engine.py::TestBasicMathEvaluation::test_math_functions [32mPASSED[0m[32m [  4%][0m
+tests/test_calculation_engine.py::TestBasicMathEvaluation::test_output_capture [32mPASSED[0m[32m [  6%][0m
+tests/test_calculation_engine.py::TestPintUnitCalculations::test_simple_units [32mPASSED[0m[32m [  8%][0m
+tests/test_calculation_engine.py::TestPintUnitCalculations::test_unit_arithmetic [32mPASSED[0m[32m [ 10%][0m
+tests/test_calculation_engine.py::TestPintUnitCalculations::test_unit_conversion [32mPASSED[0m[32m [ 13%][0m
+tests/test_calculation_engine.py::TestPintUnitCalculations::test_dimensional_analysis [32mPASSED[0m[32m [ 15%][0m
+tests/test_calculation_engine.py::TestContextPreservation::test_context_sharing [32mPASSED[0m[32m [ 17%][0m
+tests/test_calculation_engine.py::TestErrorHandling::test_syntax_error [32mPASSED[0m[32m [ 19%][0m
+tests/test_calculation_engine.py::TestErrorHandling::test_runtime_error [32mPASSED[0m[32m [ 21%][0m
+tests/test_calculation_engine.py::TestErrorHandling::test_undefined_variable [32mPASSED[0m[32m [ 23%][0m
+tests/test_calculation_engine.py::TestEngineeringCalculations::test_beam_analysis [32mPASSED[0m[32m [ 26%][0m
+tests/test_calculation_engine.py::TestEngineeringCalculations::test_stress_calculation [32mPASSED[0m[33m [ 28%][0m
+tests/test_calculation_engine.py::TestEngineeringCalculations::test_fluid_mechanics [32mPASSED[0m[33m [ 30%][0m
+tests/test_calculation_engine.py::TestPerformance::test_execution_time_recorded [32mPASSED[0m[33m [ 32%][0m
+tests/test_calculation_engine.py::TestPerformance::test_large_calculation [32mPASSED[0m[33m [ 34%][0m
+tests/test_export_service.py::TestPandocAvailability::test_pandoc_check [32mPASSED[0m[33m [ 36%][0m
+tests/test_export_service.py::TestPandocAvailability::test_exports_directory_exists [32mPASSED[0m[33m [ 39%][0m
+tests/test_export_service.py::TestPDFExport::test_simple_pdf_export [33mSKIPPED[0m[33m [ 41%][0m
+tests/test_export_service.py::TestPDFExport::test_pdf_with_math [33mSKIPPED[0m[33m  [ 43%][0m
+tests/test_export_service.py::TestPDFExport::test_pdf_with_metadata [33mSKIPPED[0m[33m [ 45%][0m
+tests/test_export_service.py::TestPDFExport::test_pdf_with_code_blocks [33mSKIPPED[0m[33m [ 47%][0m
+tests/test_export_service.py::TestPDFExport::test_pdf_complex_document [33mSKIPPED[0m[33m [ 50%][0m
+tests/test_export_service.py::TestPDFExport::test_pdf_filename_without_extension [33mSKIPPED[0m[33m [ 52%][0m
+tests/test_export_service.py::TestPDFExport::test_pdf_filename_with_extension [33mSKIPPED[0m[33m [ 54%][0m
+tests/test_export_service.py::TestPDFExportWithoutPandoc::test_pdf_export_fails_without_pandoc [32mPASSED[0m[33m [ 56%][0m
+tests/test_export_service.py::TestHTMLExport::test_simple_html_export [32mPASSED[0m[33m [ 58%][0m
+tests/test_export_service.py::TestHTMLExport::test_html_with_math [32mPASSED[0m[33m [ 60%][0m
+tests/test_export_service.py::TestHTMLExport::test_html_filename_handling [32mPASSED[0m[33m [ 63%][0m
+tests/test_export_service.py::TestExportErrorHandling::test_invalid_markdown_content [33mSKIPPED[0m[33m [ 65%][0m
+tests/test_export_service.py::TestExportIntegration::test_export_directory_permissions [32mPASSED[0m[33m [ 67%][0m
+tests/test_export_service.py::TestExportIntegration::test_multiple_exports [32mPASSED[0m[33m [ 69%][0m
+tests/test_latex_rendering.py::TestHandcalcsLatexGeneration::test_latex_generation_basic [32mPASSED[0m[33m [ 71%][0m
+tests/test_latex_rendering.py::TestHandcalcsLatexGeneration::test_latex_generation_with_units [32mPASSED[0m[33m [ 73%][0m
+tests/test_latex_rendering.py::TestHandcalcsLatexGeneration::test_latex_with_print_output [32mPASSED[0m[33m [ 76%][0m
+tests/test_latex_rendering.py::TestHandcalcsLatexGeneration::test_formatted_output [32mPASSED[0m[33m [ 78%][0m
+tests/test_latex_rendering.py::TestMathematicalExpressions::test_complex_formula [32mPASSED[0m[33m [ 80%][0m
+tests/test_latex_rendering.py::TestMathematicalExpressions::test_trigonometric_expressions [32mPASSED[0m[33m [ 82%][0m
+tests/test_latex_rendering.py::TestMarkdownCompatibility::test_special_characters_in_output [32mPASSED[0m[33m [ 84%][0m
+tests/test_latex_rendering.py::TestMarkdownCompatibility::test_multiline_output [32mPASSED[0m[33m [ 86%][0m
+tests/test_latex_rendering.py::TestMarkdownCompatibility::test_table_like_output [32mPASSED[0m[33m [ 89%][0m
+tests/test_latex_rendering.py::TestUnitFormatting::test_unit_display_format [32mPASSED[0m[33m [ 91%][0m
+tests/test_latex_rendering.py::TestUnitFormatting::test_compound_units [32mPASSED[0m[33m [ 93%][0m
+tests/test_latex_rendering.py::TestUnitFormatting::test_dimensionless_quantities [32mPASSED[0m[33m [ 95%][0m
+tests/test_latex_rendering.py::TestResultSerialization::test_result_structure [32mPASSED[0m[33m [ 97%][0m
+tests/test_latex_rendering.py::TestResultSerialization::test_list_serialization [32mPASSED[0m[33m [100%][0m
+
+[33m=============================== warnings summary ===============================[0m
+tests/test_calculation_engine.py: 10 warnings
+tests/test_latex_rendering.py: 8 warnings
+  /root/.cache/pypoetry/virtualenvs/engicalc-CsaH1w1w-py3.11/lib/python3.11/site-packages/pint/formatting.py:538: DeprecationWarning: The given format spec does not contain a unit formatter. Falling back to the builtin defaults, but in the future the unit formatter specified in the `default_format` attribute will be used instead.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+[33m================== [32m38 passed[0m, [33m[1m8 skipped[0m, [33m[1m18 warnings[0m[33m in 0.80s[0m[33m ==================[0m
