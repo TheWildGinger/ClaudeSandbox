@@ -7,7 +7,7 @@ interface ToolbarProps {
 }
 
 export default function Toolbar({ onToggleSidebar }: ToolbarProps) {
-  const { currentDocument, isModified, setSaving, updateContent, updateMetadata } =
+  const { currentDocument, isModified, setSaving } =
     useDocumentStore()
   const [exporting, setExporting] = useState(false)
 
