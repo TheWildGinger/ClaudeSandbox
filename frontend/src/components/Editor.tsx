@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import MonacoEditor from '@monaco-editor/react'
 import { useDocumentStore } from '../stores/documentStore'
 
