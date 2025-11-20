@@ -93,18 +93,9 @@ function CodeBlock({ node, inline, className, children, ...props }: any) {
                   </div>
                 )}
 
-                {/* Output */}
-                {result.output && (
-                  <div className="mb-2">
-                    <pre className="text-sm text-gray-700 bg-gray-50 p-2 rounded">
-                      {result.output}
-                    </pre>
-                  </div>
-                )}
-
                 {/* Variables */}
                 {result.result && Object.keys(result.result).length > 0 && (
-                  <div className="text-sm">
+                  <div className="text-sm mb-4">
                     <div className="font-semibold mb-1">Variables:</div>
                     <div className="space-y-1">
                       {Object.entries(result.result).map(([key, value]) => (
@@ -118,6 +109,15 @@ function CodeBlock({ node, inline, className, children, ...props }: any) {
                         </div>
                       ))}
                     </div>
+                  </div>
+                )}
+
+                {/* Output */}
+                {result.output && (
+                  <div className="mb-2">
+                    <pre className="text-sm text-gray-700 bg-gray-50 p-2 rounded">
+                      {result.output}
+                    </pre>
                   </div>
                 )}
 
