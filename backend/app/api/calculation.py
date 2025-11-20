@@ -44,7 +44,12 @@ async def execute_calculations(request: CalculationRequest) -> CalculationRespon
                     else:
                         context[key] = value
 
-        return CalculationResponse(results=results, final_context=context)
+        # Serialize the final context for JSON response
+        serialized_context = {
+            k: calculation_engine._serialize_value(v) for k, v in context.items()
+        }
+
+        return CalculationResponse(results=results, final_context=serialized_context)
 
     except Exception as e:
         logger.error(f"Calculation execution error: {e}", exc_info=True)
