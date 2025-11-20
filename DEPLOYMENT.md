@@ -40,17 +40,39 @@ This creates a single `EngiCalc.exe` file that contains everything needed to run
 
 ### Build Steps
 
+**Method A: Standard Build (with Poetry)**
+
 1. **Open Command Prompt** (or PowerShell) in the project root directory
 
 2. **Run the build script**:
    ```cmd
    build-windows.bat
    ```
+   This script will automatically install Poetry if needed and detect whether to use `poetry` or `python -m poetry`.
 
 3. **Wait for the build to complete** (5-10 minutes)
    - Frontend will be built first
    - Backend dependencies will be installed
    - PyInstaller will bundle everything into an .exe
+
+4. **Find your executable**:
+   ```
+   backend\dist\EngiCalc.exe
+   ```
+
+**Method B: Simple Build (without Poetry)**
+
+If you're having issues with Poetry, use this simpler alternative:
+
+1. **Open Command Prompt** in the project root directory
+
+2. **Run the simple build script**:
+   ```cmd
+   build-windows-simple.bat
+   ```
+   This uses pip and a virtual environment instead of Poetry.
+
+3. **Wait for the build** (5-10 minutes)
 
 4. **Find your executable**:
    ```
@@ -214,10 +236,36 @@ After building, test these features:
 
 ### Build Fails on Windows
 
-**Error**: `poetry not found`
-```cmd
-pip install poetry
-```
+**Error**: `'poetry' is not recognized as an internal or external command`
+
+This is the most common issue. Try these solutions in order:
+
+1. **Use the simple build script instead**:
+   ```cmd
+   build-windows-simple.bat
+   ```
+   This doesn't require Poetry at all.
+
+2. **If you want to use Poetry**, install it properly:
+   - Close the current Command Prompt
+   - Open a **new** Command Prompt as Administrator
+   - Run: `pip install poetry`
+   - Close and open another **new** Command Prompt
+   - Try `build-windows.bat` again
+
+3. **Or install Poetry officially**:
+   - Open PowerShell and run:
+     ```powershell
+     (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
+     ```
+   - Close and reopen Command Prompt
+   - Try again
+
+4. **Check if Poetry is installed**:
+   ```cmd
+   python -m poetry --version
+   ```
+   If this works, the updated `build-windows.bat` will automatically use `python -m poetry` instead.
 
 **Error**: `npm not found`
 - Install Node.js from https://nodejs.org/
